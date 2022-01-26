@@ -1,4 +1,4 @@
-import {Flex, Text} from '@chakra-ui/react'
+import {Flex, Stack, Text} from '@chakra-ui/react'
 
 
 export function Banner() {
@@ -13,7 +13,26 @@ export function Banner() {
           position="relative"
           flex="1"
         >
-          <h1>hi</h1>
+          <Stack align='center'>
+            <Text
+              color='#F5F8FA'
+              fontSize='36px'
+              direction='column'
+              fontFamily='Poppins'
+              pl='140px'
+              >
+              5 Continentes, infinitas possibilidades.
+            </Text>
+            <Text
+              color='#DADADA'
+              fontSize='20px'
+              direction='column'
+              fontFamily='Poppins'
+              pl='140px'
+            >
+              Chegou a hora de tirar do papel a viagem que você sempre sonhou. 
+            </Text>
+          </Stack>
             
         </Flex>
     );
