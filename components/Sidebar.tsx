@@ -6,7 +6,7 @@ export function Sidebar(){
             <Stack w='158px' h='145px' mr='130px'>
                 <Center>
                     <Img
-                        src='Copo.png' 
+                        src='sidebar/Copo.png' 
                         alt='Drink' 
                         w='85px'
                         h='85px'
@@ -28,7 +28,7 @@ export function Sidebar(){
             <Stack w='85px' h='145px' mr='151px'>
                 <Center>
                     <Img
-                        src='Prancha.png'
+                        src='sidebar/Prancha.png'
                         alt='Prancha' 
                         w='85px'
                         h='85px'
@@ -45,7 +45,7 @@ export function Sidebar(){
             <Stack w='158px' h='113px' mr='171px'>
                 <Center>
                     <Img
-                        src='Predio.png'
+                        src='sidebar/Predio.png'
                         alt='predio' 
                         w='85px'
                         h='85px'
@@ -62,7 +62,7 @@ export function Sidebar(){
             <Stack w='158px' h='100px' mr='159px'>
                 <Center>
                     <Img
-                        src='museum.png'
+                        src='sidebar/museum.png'
                         alt='museu'  
                         w='85px'
                         h='85px'
@@ -79,7 +79,7 @@ export function Sidebar(){
             <Stack w='158px' h='101px' >
                 <Center>
                     <Img
-                        src='terra.png'
+                        src='sidebar/terra.png'
                         alt='terra' 
                         w='85px'
                         h='85px'

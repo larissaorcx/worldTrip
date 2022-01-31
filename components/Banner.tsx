@@ -5,7 +5,7 @@ export function Banner() {
     return(
         <Flex
           
-          bgImg=" url( 'Background.png ' ) "
+          bgImg=" url( 'banner/Background.png ' ) "
           w='1440px'
           maxWidth={1440}
           h='368.21px'
@@ -36,7 +36,7 @@ export function Banner() {
             <Flex direction='column' w='100%' h='100%'>
               <Center mr='146.8px' mt='86.73px'>
                 <Img
-                  src='Airplane.png'
+                  src='banner/Airplane.png'
                   alt='Avião' 
                   w='417.15px'
                   h='270.74px'
