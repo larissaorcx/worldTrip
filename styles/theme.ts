@@ -9,6 +9,7 @@ export const theme = extendTheme({
             400: '#999999',
             500: '#DADADA',
             600: '#F5F8FA',
+            700: '#C4C4C4',
 
         }
     },

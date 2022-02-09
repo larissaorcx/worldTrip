@@ -15,7 +15,7 @@ export default function Home() {
       mx="auto"
     >
       <Header homepage />
-      <Banner />
+      <Banner inHome/>
       <Sidebar />
       <Flex w="90px" mt="80px" mr="40px" mb="52px">
         <Divider colorScheme="brand.300" borderBottom="2px" />

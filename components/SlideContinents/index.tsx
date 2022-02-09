@@ -11,53 +11,55 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel } from "swiper";
 
 //import chakra
-import { Center, Flex, Img, Stack, Text } from "@chakra-ui/react";
+import { Center, Flex, Img, Link, Stack, Text } from "@chakra-ui/react";
 
 export default function SlideContinents() {
   return (
       <Flex w='1240px' h='450px' mt="80px" mb='40px' align='center'>
         <Swiper
-          cssMode={true}
-          navigation={true}
-          pagination={true}
-          mousewheel={true}
+          cssMode
+          navigation
+          pagination
+          mousewheel
           modules={[Navigation, Pagination, Mousewheel]}
           className="mySwiper"
         >
           <SwiperSlide>
             <Flex
-              bgImg=" url( 'https://bigseventravel.com/wp-content/uploads/2019/08/Screenshot-2019-08-12-at-17.38.11.png ' ) "
+              bgImg=" url( 'slideContinents/america-do-norte.png' ) "
               w='1240px'
               h='450px'
               bgPosition='center'
               >
               <Center w='1240px'>
                 <Stack>
-                  <Text
-                    fontWeight='700'
-                    fontSize='48px'
-                    lineHeight='72px'
-                    color='brand.600'
-                    mx='auto'>
-                    América do Norte
-                  </Text>
-                  <Center w='100%'>
                     <Text
-                      fontSize='24px'
                       fontWeight='700'
-                      lineHeight='36px'
+                      fontSize='48px'
+                      lineHeight='72px'
                       color='brand.600'
-                      >
-                      A maior fronteira em termos de extensão do planeta
+                      mx='auto'>
+                      <Link href='/continent/america-do-norte' textDecoration='none'>
+                        América do Norte
+                      </Link>
                     </Text>
-                  </Center>
+                    <Center w='100%'>
+                      <Text
+                        fontSize='24px'
+                        fontWeight='700'
+                        lineHeight='36px'
+                        color='brand.600'
+                        >
+                        A maior fronteira em termos de extensão do planeta
+                      </Text>
+                    </Center>
                 </Stack>
               </Center>
             </Flex>
           </SwiperSlide>
           <SwiperSlide>
           <Flex
-            bgImg=" url( 'https://bigseventravel.com/wp-content/uploads/2019/08/Screenshot-2019-08-12-at-14.31.46.png' ) "
+            bgImg=" url( 'slideContinents/america-do-sul.png' ) "
             w='1240px'
             h='450px'
             bgPosition='center'
@@ -70,7 +72,9 @@ export default function SlideContinents() {
                     lineHeight='72px'
                     color='brand.600'
                     mx='auto'>
-                    América do Sul
+                      <Link href='/continent/america-do-sul' passHref>
+                        América do Sul
+                      </Link>
                   </Text>
                   <Center w='100%'>
                     <Text
@@ -88,7 +92,7 @@ export default function SlideContinents() {
           </SwiperSlide>
           <SwiperSlide>
           <Flex
-            bgImg=" url( 'https://bigseventravel.com/wp-content/uploads/2019/08/Screenshot-2019-08-14-at-12.45.18.png' ) "
+            bgImg=" url( 'slideContinents/Asia.png' ) "
             w='1240px'
             h='450px'bgPosition='center'>
               <Center w='1240px'>
@@ -99,7 +103,9 @@ export default function SlideContinents() {
                     lineHeight='72px'
                     color='brand.600'
                     mx='auto'>
-                    Ásia
+                      <Link href='/continent/Asia' passHref>
+                        Ásia
+                      </Link>
                   </Text>
                   <Center w='100%'>
                     <Text
@@ -108,7 +114,7 @@ export default function SlideContinents() {
                       lineHeight='36px'
                       color='brand.600'
                       >
-                      O maior dos continentes
+                        O maior dos continentes
                     </Text>
                   </Center>
                 </Stack>
@@ -117,7 +123,7 @@ export default function SlideContinents() {
           </SwiperSlide>
           <SwiperSlide>
           <Flex
-            bgImg=" url( 'https://bigseventravel.com/wp-content/uploads/2019/08/Screenshot-2019-08-14-at-09.35.43.png' ) "
+            bgImg=" url( 'slideContinents/Africa.png' ) "
             w='1240px'
             h='450px'
             bgRepeat='no-repeat'
@@ -131,7 +137,9 @@ export default function SlideContinents() {
                     lineHeight='72px'
                     color='brand.600'
                     mx='auto'>
-                    África
+                      <Link href='/continent/Africa' passHref>
+                        África
+                      </Link>
                   </Text>
                   <Center w='100%'>
                     <Text
@@ -148,17 +156,19 @@ export default function SlideContinents() {
             </Flex>
           </SwiperSlide>
           <SwiperSlide>
-          <Flex bgImg=" url( 'slideContinents/europa.png ' ) " w='1240px' h='450px'>
+          <Flex bgImg=" url( 'slideContinents/europa.png' ) " w='1240px' h='450px'>
               <Center w='1240px'>
                 <Stack>
-                  <Text
-                    fontWeight='700'
-                    fontSize='48px'
-                    lineHeight='72px'
-                    color='brand.600'
-                    mx='auto'>
-                    Europa
-                  </Text>
+                    <Text
+                      fontWeight='700'
+                      fontSize='48px'
+                      lineHeight='72px'
+                      color='brand.600'
+                      mx='auto'>
+                      <Link href='/continent/Europa'>
+                        Europa
+                      </Link>
+                    </Text>
                   <Center w='100%'>
                     <Text
                       fontSize='24px'
@@ -175,7 +185,7 @@ export default function SlideContinents() {
           </SwiperSlide>
           <SwiperSlide>
           <Flex
-            bgImg=" url( 'https://c4.wallpaperflare.com/wallpaper/324/269/183/bowen-falls-wallpaper-preview.jpg' ) "
+            bgImg=" url( 'slideContinents/Oceania.png' ) "
             w='1240px'
             h='450px'
             bgPosition='center'
@@ -189,7 +199,9 @@ export default function SlideContinents() {
                     lineHeight='72px'
                     color='brand.600'
                     mx='auto'>
-                    Oceania
+                      <Link href='/continent/Oceania' passHref>
+                        Oceania
+                      </Link>
                   </Text>
                   <Center w='100%'>
                     <Text

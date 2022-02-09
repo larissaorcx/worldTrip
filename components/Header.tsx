@@ -1,4 +1,7 @@
-import {Img, Center, Flex, Icon, Link, IconButton } from '@chakra-ui/react'
+import { Center, Flex, Icon, Link, IconButton } from '@chakra-ui/react'
+
+import Image from 'next/image';
+
 import {AiOutlineLeft} from 'react-icons/ai'
 
 interface HeaderProps{
@@ -7,7 +10,7 @@ interface HeaderProps{
 
 export function Header({homepage}: HeaderProps) {
     return(
-        <Flex as='header' align='center' w='1440px'>
+        <Flex as='header' align='center' w='1440px' mb='4' mt='4'>
             {!homepage && (
                 <Link href='/' passHref>
                     <IconButton
@@ -17,15 +20,17 @@ export function Header({homepage}: HeaderProps) {
                       as={AiOutlineLeft}
                       />}
                       variant="unstyled"
-                      ml='100px'
+                      ml='50px'
                     >
                     </IconButton >
                 </Link>
             )}
-            <Center p='4' w='100%'>
-                <Img
-                src='header/Logo.png'
-                alt='logo' />
+            <Center w='100%'>
+                <Image
+                src='/header/Logo.png'
+                alt='logo' 
+                width={184.06}
+                height={45.92}/>
             </Center>
         </Flex>
     );
