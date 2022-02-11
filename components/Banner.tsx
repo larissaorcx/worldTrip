@@ -3,6 +3,7 @@ import { Box, Center, Flex, Img, Stack, Text } from '@chakra-ui/react';
 interface BannerProps {
     inHome?: boolean;
     continent?: {
+        imgName: string;
         name: string;
     };
 }
@@ -12,7 +13,7 @@ export function Banner({ inHome, continent }: BannerProps) {
         <>
             {!inHome ? (
                 <Flex
-                    bgImg={`url('/slideContinents/${continent.name}.png')`}
+                    bgImg={`url('/slideContinents/${continent.imgName}.png')`}
                     w="1440px"
                     maxWidth={1440}
                     h="500px"

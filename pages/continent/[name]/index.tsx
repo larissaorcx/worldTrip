@@ -21,12 +21,83 @@ import { HiOutlineInformationCircle } from 'react-icons/hi';
 export default function Continent() {
     const router = useRouter();
     const { name } = router.query;
-    return (
+
+    let continentName = '';
+    let description = '';
+    let paises = 0;
+    let language = 0;
+    let cities = 0;
+    let country = '';
+    let city = '';
+    let imgCoutry = '';
+    let imgFlag = '';
+
+    switch (name) {
+        case 'america-do-norte': {
+            continentName = 'América do norte';
+            description =
+                'A América do Norte é um subcontinente que compreende a porção setentrional do continente americano.';
+            paises = 23;
+            language = 6;
+            cities = 23;
+            break;
+        }
+        case 'america-do-sul': {
+            continentName = 'América do sul';
+            description =
+                'A América do Sul é um dos subcontinentes que formam a América. Ela é composta por 12 países que foram colonizados, proritariamente, por portugueses e espanhóis. A população sul-americana é compostada por descendentes de povos indígenas, europeus e africanos, que contribuíram diretamente para a formação das sociedades locais.';
+            paises = 12;
+            language = 8;
+            cities = 22;
+            break;
+        }
+        case 'Asia': {
+            continentName = 'Ásia';
+            description =
+                'A Ásia é o maior dos continentes, tanto em área como em população. Abrange um terço das partes sólidas da superfície da Terra e é responsável por abrigar quase três quintos da população mundial.';
+            paises = 50;
+            language = 2.301;
+            cities = 10;
+            break;
+        }
+        case 'Africa': {
+            continentName = 'África';
+            description =
+                'Considerada o berço da humanidade – teses indicam que o gênero homo tenha surgido no continente africano há mais de 2 milhões de anos – a África em sua história recente vive inúmeros conflitos políticos e uma grave crise social e econômica.';
+            paises = 54;
+            language = 2.092;
+            cities = 13;
+            break;
+        }
+        case 'Europa': {
+            continentName = 'Europa';
+            description =
+                'A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.';
+            paises = 50;
+            language = 60;
+            cities = 27;
+            break;
+        }
+        case 'Oceania': {
+            continentName = 'Oceania';
+            description =
+                'Seu território possui aproximadamente 8,5 milhões de km² sendo que só a Austrália ocupa cerca de 96% do total. Podemos dizer que a Austrália é o único continente da Oceania, uma vez que o restante dela se constitui de inúmeras ilhas e fiordes.';
+            paises = 14;
+            language = 820;
+            cities = 2;
+            break;
+        }
+
+        default:
+            break;
+    }
+    return name ? (
         <>
             <Header />
             <Banner
                 continent={{
-                    name: String(name),
+                    imgName: String(name),
+                    name: continentName,
                 }}
             />
 
@@ -40,12 +111,7 @@ export default function Continent() {
                             textAlign="justify"
                             lineHeight="36px"
                         >
-                            A {name} é, por convenção, um dos seis continentes
-                            do mundo. Compreendendo a península ocidental da
-                            Eurásia, a Europa geralmente divide-se da Ásia a
-                            leste pela divisória de águas dos montes Urais, o
-                            rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a
-                            sudeste
+                            {description}
                         </Text>
                     </Box>
                     <SimpleGrid columns={3} spacing={42}>
@@ -59,7 +125,7 @@ export default function Continent() {
                                     align="center"
                                     justify="center"
                                 >
-                                    50
+                                    {paises}
                                 </Text>
                                 <Text
                                     fontWeight="600"
@@ -81,7 +147,7 @@ export default function Continent() {
                                     align="center"
                                     justify="center"
                                 >
-                                    60
+                                    {language}
                                 </Text>
                                 <Text
                                     fontWeight="600"
@@ -103,7 +169,7 @@ export default function Continent() {
                                     align="center"
                                     justify="center"
                                 >
-                                    27
+                                    {cities}
                                 </Text>
                                 <HStack align="center">
                                     <Text
@@ -424,5 +490,5 @@ export default function Continent() {
                 </Wrap>
             </Flex>
         </>
-    );
+    ) : null;
 }
