@@ -13,7 +13,7 @@ export function Banner({ inHome, continent }: BannerProps) {
         <>
             {!inHome ? (
                 <Flex
-                    bgImg={`url('/slideContinents/${continent.imgName}.png')`}
+                    bgImg={`url('${continent.imgName}.jpg')`}
                     w="1440px"
                     maxWidth={1440}
                     h="500px"

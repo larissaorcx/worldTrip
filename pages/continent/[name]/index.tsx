@@ -27,6 +27,7 @@ export default function Continent() {
     let language = 0;
     let cities = 0;
     let country = [];
+    let imgName = '';
 
     switch (name) {
         case 'america-do-norte': {
@@ -68,6 +69,7 @@ export default function Continent() {
                     flag: '/flag/AmericaDoNorte/belize.png',
                 },
             ];
+            imgName = '/bgImage/AN';
             break;
         }
         case 'america-do-sul': {
@@ -109,6 +111,7 @@ export default function Continent() {
                     flag: '/flag/AmericaDoSul/colombia.png',
                 },
             ];
+            imgName = '/bgImage/AS';
             break;
         }
         case 'Asia': {
@@ -150,6 +153,7 @@ export default function Continent() {
                     flag: '/flag/Asia/em.png',
                 },
             ];
+            imgName = '/bgImage/asia';
             break;
         }
         case 'Africa': {
@@ -191,6 +195,7 @@ export default function Continent() {
                     flag: '/flag/Africa/As.jpg',
                 },
             ];
+            imgName = '/bgImage/Africa';
             break;
         }
         case 'Europa': {
@@ -232,6 +237,7 @@ export default function Continent() {
                     flag: '/flag/Europa/holanda.png',
                 },
             ];
+            imgName = '/bgImage/europa';
             break;
         }
         case 'Oceania': {
@@ -273,6 +279,7 @@ export default function Continent() {
                     flag: '/flag/Oceania/samoa.png',
                 },
             ];
+            imgName = '/bgImage/oceania';
             break;
         }
 
@@ -284,7 +291,7 @@ export default function Continent() {
             <Header />
             <Banner
                 continent={{
-                    imgName: String(name),
+                    imgName: imgName,
                     name: continentName,
                 }}
             />
@@ -403,7 +410,7 @@ export default function Continent() {
                 </Text>
                 <Wrap>
                     {country.map((obj) => (
-                        <WrapItem key="pais">
+                        <WrapItem key={obj.imgCountry}>
                             <Box
                                 maxW="sm"
                                 borderWidth="1px"
