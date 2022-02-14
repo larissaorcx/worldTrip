@@ -8,7 +8,6 @@ import {
     Text,
     Tooltip,
     Img,
-    Stack,
     Wrap,
     WrapItem,
 } from '@chakra-ui/react';
@@ -27,10 +26,8 @@ export default function Continent() {
     let paises = 0;
     let language = 0;
     let cities = 0;
-    let country = '';
-    let city = '';
-    let imgCoutry = '';
-    let imgFlag = '';
+    let country = [];
+    let imgName = '';
 
     switch (name) {
         case 'america-do-norte': {
@@ -40,15 +37,81 @@ export default function Continent() {
             paises = 23;
             language = 6;
             cities = 23;
+            country = [
+                {
+                    pais: 'Canadá',
+                    cidade: 'Toronto',
+                    imgCountry: '/cidades/AmericaDoNorte/toronto.jpg',
+                    flag: '/flag/AmericaDoNorte/canada.jpg',
+                },
+                {
+                    pais: 'Estados Unidos',
+                    cidade: 'Nova York',
+                    imgCountry: '/cidades/AmericaDoNorte/ny.jpg',
+                    flag: '/flag/AmericaDoNorte/eua.jpg',
+                },
+                {
+                    pais: 'México',
+                    cidade: 'Puerto Vallarta',
+                    imgCountry: '/cidades/AmericaDoNorte/pv.jpg',
+                    flag: '/flag/AmericaDoNorte/mexico.png',
+                },
+                {
+                    pais: 'Bahamas',
+                    cidade: 'Nassau',
+                    imgCountry: '/cidades/AmericaDoNorte/nassau.jpg',
+                    flag: '/flag/AmericaDoNorte/bhamas.png',
+                },
+                {
+                    pais: 'Belize',
+                    cidade: 'Caye Caulker',
+                    imgCountry: '/cidades/AmericaDoNorte/cc.jpg',
+                    flag: '/flag/AmericaDoNorte/belize.png',
+                },
+            ];
+            imgName = '/bgImage/AN';
             break;
         }
         case 'america-do-sul': {
             continentName = 'América do sul';
             description =
-                'A América do Sul é um dos subcontinentes que formam a América. Ela é composta por 12 países que foram colonizados, proritariamente, por portugueses e espanhóis. A população sul-americana é compostada por descendentes de povos indígenas, europeus e africanos, que contribuíram diretamente para a formação das sociedades locais.';
+                'A América do Sul é um dos subcontinentes que formam a América. Ela é composta por 12 países que foram colonizados, proritariamente, por portugueses e espanhóis. A população sul-americana é compostada por descendentes de povos indígenas, europeus e africanos.';
             paises = 12;
             language = 8;
             cities = 22;
+            country = [
+                {
+                    pais: 'Brasil',
+                    cidade: 'Rio de Janeiro',
+                    imgCountry: '/cidades/AmericaDoSul/rj.jpg',
+                    flag: '/flag/AmericaDoSul/br.jpg',
+                },
+                {
+                    pais: 'Argentina',
+                    cidade: 'Buenos Aires',
+                    imgCountry: '/cidades/AmericaDoSul/ba.jpg',
+                    flag: '/flag/AmericaDoSul/argentina.jpg',
+                },
+                {
+                    pais: 'Peru',
+                    cidade: 'Cusco ',
+                    imgCountry: '/cidades/AmericaDoSul/cusco.jpg',
+                    flag: '/flag/AmericaDoSul/peru.jpg',
+                },
+                {
+                    pais: 'Chile',
+                    cidade: 'Santiago',
+                    imgCountry: '/cidades/AmericaDoSul/santiago.jpg',
+                    flag: '/flag/AmericaDoSul/chile.png',
+                },
+                {
+                    pais: 'Colômbia',
+                    cidade: 'Santa Marta',
+                    imgCountry: '/cidades/AmericaDoSul/sm.jpg',
+                    flag: '/flag/AmericaDoSul/colombia.png',
+                },
+            ];
+            imgName = '/bgImage/AS';
             break;
         }
         case 'Asia': {
@@ -58,6 +121,39 @@ export default function Continent() {
             paises = 50;
             language = 2.301;
             cities = 10;
+            country = [
+                {
+                    pais: 'Indonésia',
+                    cidade: 'Bali',
+                    imgCountry: '/cidades/Asia/bali.jpg',
+                    flag: '/flag/Asia/indonesia.png',
+                },
+                {
+                    pais: 'Tailândia',
+                    cidade: 'Bangkok ',
+                    imgCountry: '/cidades/Asia/bang.jpg',
+                    flag: '/flag/Asia/tailandia.png',
+                },
+                {
+                    pais: 'Japão',
+                    cidade: 'Tóquio',
+                    imgCountry: '/cidades/Asia/toquio.jpg',
+                    flag: '/flag/Asia/japao.png',
+                },
+                {
+                    pais: 'Turquia',
+                    cidade: 'Istambul ',
+                    imgCountry: '/cidades/Asia/istambul.jpg',
+                    flag: '/flag/Asia/turquia.png',
+                },
+                {
+                    pais: 'Emirados Árabes',
+                    cidade: 'Dubai',
+                    imgCountry: '/cidades/Asia/dubai.jpg',
+                    flag: '/flag/Asia/em.png',
+                },
+            ];
+            imgName = '/bgImage/asia';
             break;
         }
         case 'Africa': {
@@ -67,6 +163,39 @@ export default function Continent() {
             paises = 54;
             language = 2.092;
             cities = 13;
+            country = [
+                {
+                    pais: 'África do Sul',
+                    cidade: 'Joanesburgo',
+                    imgCountry: '/cidades/Africa/jb.jpg',
+                    flag: '/flag/Africa/As.jpg',
+                },
+                {
+                    pais: 'Uganda ',
+                    cidade: 'Entebbe',
+                    imgCountry: '/cidades/Africa/entebbe.jpg',
+                    flag: '/flag/Africa/uganda.png',
+                },
+                {
+                    pais: 'Quênia',
+                    cidade: 'Nairobi ',
+                    imgCountry: '/cidades/Africa/nairobi.jpg',
+                    flag: '/flag/Africa/quenia.png',
+                },
+                {
+                    pais: 'Moçambique',
+                    cidade: 'Maputo',
+                    imgCountry: '/cidades/Africa/maputo.jpg',
+                    flag: '/flag/Africa/mocambique.png',
+                },
+                {
+                    pais: 'África do Sul',
+                    cidade: 'Durban',
+                    imgCountry: '/cidades/Africa/durban.jpg',
+                    flag: '/flag/Africa/As.jpg',
+                },
+            ];
+            imgName = '/bgImage/Africa';
             break;
         }
         case 'Europa': {
@@ -76,6 +205,39 @@ export default function Continent() {
             paises = 50;
             language = 60;
             cities = 27;
+            country = [
+                {
+                    pais: 'Reino Unido',
+                    cidade: 'Londres',
+                    imgCountry: '/cidades/Europa/londres.png',
+                    flag: '/flag/Europa/Ru.png',
+                },
+                {
+                    pais: 'França',
+                    cidade: 'Paris',
+                    imgCountry: '/cidades/Europa/paris.png',
+                    flag: '/flag/Europa/franca.png',
+                },
+                {
+                    pais: 'Itália',
+                    cidade: 'Roma ',
+                    imgCountry: '/cidades/Europa/roma.png',
+                    flag: '/flag/Europa/italia.png',
+                },
+                {
+                    pais: 'República Tcheca',
+                    cidade: 'Praga',
+                    imgCountry: '/cidades/Europa/praga.png',
+                    flag: '/flag/Europa/rt.png',
+                },
+                {
+                    pais: 'Holanda',
+                    cidade: 'Amsterdã',
+                    imgCountry: '/cidades/Europa/ams.png',
+                    flag: '/flag/Europa/holanda.png',
+                },
+            ];
+            imgName = '/bgImage/europa';
             break;
         }
         case 'Oceania': {
@@ -85,6 +247,39 @@ export default function Continent() {
             paises = 14;
             language = 820;
             cities = 2;
+            country = [
+                {
+                    pais: 'Austrália',
+                    cidade: 'Sydney',
+                    imgCountry: '/cidades/Oceania/sydney.jpg',
+                    flag: '/flag/Oceania/australia.png',
+                },
+                {
+                    pais: 'Fiji',
+                    cidade: 'Yasawa',
+                    imgCountry: '/cidades/Oceania/yasawa.jpg',
+                    flag: '/flag/Oceania/fiji.png',
+                },
+                {
+                    pais: 'Nova Zelândia',
+                    cidade: 'Waitomo',
+                    imgCountry: '/cidades/Oceania/w.jpg',
+                    flag: '/flag/Oceania/nz.png',
+                },
+                {
+                    pais: 'Polinésia Francesa',
+                    cidade: 'Bora Bora',
+                    imgCountry: '/cidades/Oceania/borabora.jpeg',
+                    flag: '/flag/Oceania/pf.png',
+                },
+                {
+                    pais: 'Samoa',
+                    cidade: 'Apia',
+                    imgCountry: '/cidades/Oceania/apia.jpg',
+                    flag: '/flag/Oceania/samoa.png',
+                },
+            ];
+            imgName = '/bgImage/oceania';
             break;
         }
 
@@ -96,7 +291,7 @@ export default function Continent() {
             <Header />
             <Banner
                 continent={{
-                    imgName: String(name),
+                    imgName: imgName,
                     name: continentName,
                 }}
             />
@@ -110,6 +305,7 @@ export default function Continent() {
                             color="brand.300"
                             textAlign="justify"
                             lineHeight="36px"
+                            mr="70px"
                         >
                             {description}
                         </Text>
@@ -132,6 +328,8 @@ export default function Continent() {
                                     fontSize="24px"
                                     lineHeight="72px"
                                     color="brand.300"
+                                    align="center"
+                                    justify="center"
                                 >
                                     países
                                 </Text>
@@ -154,6 +352,8 @@ export default function Continent() {
                                     fontSize="24px"
                                     lineHeight="72px"
                                     color="brand.300"
+                                    align="center"
+                                    justify="center"
                                 >
                                     línguas
                                 </Text>
@@ -177,6 +377,8 @@ export default function Continent() {
                                         fontSize="24px"
                                         lineHeight="72px"
                                         color="brand.300"
+                                        align="center"
+                                        justify="center"
                                     >
                                         cidade +100
                                     </Text>
@@ -207,286 +409,66 @@ export default function Continent() {
                     Cidades +100
                 </Text>
                 <Wrap>
-                    <WrapItem>
-                        <Box
-                            maxW="sm"
-                            borderWidth="1px"
-                            borderRadius="lg"
-                            borderColor="brand.100"
-                            w="256px"
-                            mb="48px"
-                            mr="49px"
-                        >
-                            <Img
-                                src="/slideContinents/Europa.png"
+                    {country.map((obj) => (
+                        <WrapItem key={obj.imgCountry}>
+                            <Box
+                                maxW="sm"
+                                borderWidth="1px"
+                                borderRadius="lg"
+                                borderColor="brand.100"
                                 w="256px"
-                                h="173px"
-                                borderRadius="5px"
-                            />
-                            <Flex>
-                                <Flex direction="column" mt="0px">
-                                    <Text
-                                        mb="12px"
-                                        fontWeight="600"
-                                        fontSize="20px"
-                                        lineHeight="25px"
-                                        mt="18px"
-                                        color="brand.300"
-                                        ml="24px"
-                                    >
-                                        Londres
-                                    </Text>
-                                    <Text
-                                        color="brand.400"
-                                        fontWeight="500"
-                                        fontSize="16px"
-                                        lineHeight="26px"
-                                        ml="24px"
-                                    >
-                                        Reino unido
-                                    </Text>
-                                </Flex>
-                                <Flex
-                                    w="30px"
-                                    h="30px"
-                                    ml="auto"
-                                    mr="24px"
-                                    mt="38px"
-                                    my="auto"
-                                >
-                                    <Img
-                                        src="/banner/bandeira.png"
+                                mb="48px"
+                                mr="49px"
+                            >
+                                <Img
+                                    src={obj.imgCountry}
+                                    w="256px"
+                                    h="173px"
+                                    borderRadius="5px"
+                                />
+                                <Flex>
+                                    <Flex direction="column" mt="0px">
+                                        <Text
+                                            mb="12px"
+                                            fontWeight="600"
+                                            fontSize="20px"
+                                            lineHeight="25px"
+                                            mt="18px"
+                                            color="brand.300"
+                                            ml="24px"
+                                        >
+                                            {obj.cidade}
+                                        </Text>
+                                        <Text
+                                            color="brand.400"
+                                            fontWeight="500"
+                                            fontSize="16px"
+                                            lineHeight="26px"
+                                            ml="24px"
+                                            mb="24px"
+                                        >
+                                            {obj.pais}
+                                        </Text>
+                                    </Flex>
+                                    <Flex
                                         w="30px"
                                         h="30px"
-                                        borderRadius="100px"
-                                    />
-                                </Flex>
-                            </Flex>
-                        </Box>
-                    </WrapItem>
-                    <WrapItem>
-                        <Box
-                            maxW="sm"
-                            borderWidth="1px"
-                            borderRadius="lg"
-                            borderColor="brand.100"
-                            mr="49px"
-                            mb="48px"
-                        >
-                            <Img
-                                src="/slideContinents/Europa.png"
-                                w="256px"
-                                h="173px"
-                                borderRadius="5px"
-                            />
-                            <Flex>
-                                <Flex direction="column" mt="0px">
-                                    <Text
-                                        mb="12px"
-                                        fontWeight="600"
-                                        fontSize="20px"
-                                        lineHeight="25px"
-                                        mt="18px"
-                                        color="brand.300"
-                                        ml="24px"
+                                        ml="auto"
+                                        mr="24px"
+                                        mt="38px"
+                                        my="auto"
                                     >
-                                        Londres
-                                    </Text>
-                                    <Text
-                                        color="brand.400"
-                                        fontWeight="500"
-                                        fontSize="16px"
-                                        lineHeight="26px"
-                                        ml="24px"
-                                    >
-                                        Reino unido
-                                    </Text>
+                                        <Img
+                                            src={obj.flag}
+                                            w="30px"
+                                            h="30px"
+                                            borderRadius="100px"
+                                        />
+                                    </Flex>
                                 </Flex>
-                                <Flex
-                                    w="30px"
-                                    h="30px"
-                                    ml="auto"
-                                    mr="24px"
-                                    mt="38px"
-                                    my="auto"
-                                >
-                                    <Img
-                                        src="/banner/bandeira.png"
-                                        w="30px"
-                                        h="30px"
-                                        borderRadius="100px"
-                                    />
-                                </Flex>
-                            </Flex>
-                        </Box>
-                    </WrapItem>
-                    <WrapItem>
-                        <Box
-                            maxW="sm"
-                            borderWidth="1px"
-                            borderRadius="lg"
-                            borderColor="brand.100"
-                            mr="49px"
-                            mb="48px"
-                        >
-                            <Img
-                                src="/slideContinents/Europa.png"
-                                w="256px"
-                                h="173px"
-                                borderRadius="5px"
-                            />
-                            <Flex>
-                                <Flex direction="column" mt="0px">
-                                    <Text
-                                        mb="12px"
-                                        fontWeight="600"
-                                        fontSize="20px"
-                                        lineHeight="25px"
-                                        mt="18px"
-                                        color="brand.300"
-                                        ml="24px"
-                                    >
-                                        Londres
-                                    </Text>
-                                    <Text
-                                        color="brand.400"
-                                        fontWeight="500"
-                                        fontSize="16px"
-                                        lineHeight="26px"
-                                        ml="24px"
-                                    >
-                                        Reino unido
-                                    </Text>
-                                </Flex>
-                                <Flex
-                                    w="30px"
-                                    h="30px"
-                                    ml="auto"
-                                    mr="24px"
-                                    mt="38px"
-                                    my="auto"
-                                >
-                                    <Img
-                                        src="/banner/bandeira.png"
-                                        w="30px"
-                                        h="30px"
-                                        borderRadius="100px"
-                                    />
-                                </Flex>
-                            </Flex>
-                        </Box>
-                    </WrapItem>
-                    <WrapItem>
-                        <Box
-                            maxW="sm"
-                            borderWidth="1px"
-                            borderRadius="lg"
-                            borderColor="brand.100"
-                            mb="48px"
-                        >
-                            <Img
-                                src="/slideContinents/Europa.png"
-                                w="256px"
-                                h="173px"
-                                borderRadius="5px"
-                            />
-                            <Flex>
-                                <Flex direction="column" mt="0px">
-                                    <Text
-                                        mb="12px"
-                                        fontWeight="600"
-                                        fontSize="20px"
-                                        lineHeight="25px"
-                                        mt="18px"
-                                        color="brand.300"
-                                        ml="24px"
-                                    >
-                                        Londres
-                                    </Text>
-                                    <Text
-                                        color="brand.400"
-                                        fontWeight="500"
-                                        fontSize="16px"
-                                        lineHeight="26px"
-                                        ml="24px"
-                                    >
-                                        Reino unido
-                                    </Text>
-                                </Flex>
-                                <Flex
-                                    w="30px"
-                                    h="30px"
-                                    ml="auto"
-                                    mr="24px"
-                                    mt="38px"
-                                    my="auto"
-                                >
-                                    <Img
-                                        src="/banner/bandeira.png"
-                                        w="30px"
-                                        h="30px"
-                                        borderRadius="100px"
-                                    />
-                                </Flex>
-                            </Flex>
-                        </Box>
-                    </WrapItem>
-                    <WrapItem>
-                        <Box
-                            maxW="sm"
-                            borderWidth="1px"
-                            borderRadius="lg"
-                            borderColor="brand.100"
-                            mr="49px"
-                            mb="48px"
-                        >
-                            <Img
-                                src="/slideContinents/Europa.png"
-                                w="256px"
-                                h="173px"
-                                borderRadius="5px"
-                            />
-                            <Flex>
-                                <Flex direction="column" mt="0px">
-                                    <Text
-                                        mb="12px"
-                                        fontWeight="600"
-                                        fontSize="20px"
-                                        lineHeight="25px"
-                                        mt="18px"
-                                        color="brand.300"
-                                        ml="24px"
-                                    >
-                                        Londres
-                                    </Text>
-                                    <Text
-                                        color="brand.400"
-                                        fontWeight="500"
-                                        fontSize="16px"
-                                        lineHeight="26px"
-                                        ml="24px"
-                                    >
-                                        Reino unido
-                                    </Text>
-                                </Flex>
-                                <Flex
-                                    w="30px"
-                                    h="30px"
-                                    ml="auto"
-                                    mr="24px"
-                                    mt="38px"
-                                    my="auto"
-                                >
-                                    <Img
-                                        src="/banner/bandeira.png"
-                                        w="30px"
-                                        h="30px"
-                                        borderRadius="100px"
-                                    />
-                                </Flex>
-                            </Flex>
-                        </Box>
-                    </WrapItem>
+                            </Box>
+                        </WrapItem>
+                    ))}
                 </Wrap>
             </Flex>
         </>
